@@ -1,0 +1,160 @@
+.login-container {
+    max-width: 500px;
+    margin: auto;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-top: 50px;
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 260px;
+    height: auto;
+}
+
+.signup a {
+    text-decoration: none;
+    color: lime;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.signup:hover {
+    transform: scale(1.2);
+}
+
+.btn {
+    background-color: lime;
+    padding: 14px 24px;
+    font-size: 18px;
+    color: black;
+    width: 50%;
+    border-radius: 30px;
+    border-color: 2px solid #ccc;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: lime;
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.form-control {
+    height: 50px;
+    font-size: 18px;
+    color: #aaa;
+    border-radius: 15px;
+    border: 2px solid #ccc;
+    padding-left: 40px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: lime;
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+    outline: none;
+}
+
+.form-control::placeholder {
+    color: #aaa;
+    opacity: 1;
+}
+
+.icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+}
+
+.role-select {
+    position: relative;
+    transition: background-color 0.3s ease; 
+}
+
+.role-select:hover {
+    background-color: #f0f0f0; 
+    border-radius: 15px; 
+}
+
+.role-select .role-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+}
+
+.role-select select {
+    background-color: #ffffff; 
+    border-radius: 15px;
+    border: 2px solid #ccc;
+    padding-left: 40px; 
+    font-size: 18px;
+    height: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.form-select {
+    height: 50px;
+    font-size: 18px;
+    color: #aaa;
+    border-radius: 15px;
+    border: 2px solid #ccc;
+    padding-left: 40px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-select:focus {
+    border-color: lime;
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+    outline: none;
+}
+
+.form-select::placeholder {
+    color: #aaa;
+    opacity: 1;
+}
+
+
+.select-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #aaa;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animated {
+    animation: fadeIn 3s ease forwards;
+}

@@ -1,0 +1,68 @@
+.registration-box {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; 
+  min-height: 80vh; /* Adjust based on the content */
+  transition: min-height 0.3s ease;
+}
+
+.left-side {
+  background-color: lime;
+  padding: 41px;
+  flex: 0 0 66.666667%;
+  display: flex;
+  flex-direction: column;
+}
+
+.right-side {
+  flex: 0 0 33.333333%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.right-side img {
+  margin-top: -60px;
+}
+
+.big-radio {
+  width: 30px; 
+  height: 30px; 
+}
+
+.btn {
+  background-color: transparent;
+  padding: 14px 24px;
+  font-size: 18px;
+  color: black;
+  width: 30%;
+  border-color: black;
+  border-radius: 80px;
+  margin-top: 50px;
+}
+
+.btn:hover {
+  background-color: lime;
+  color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.animated {
+  animation: fadeIn 3s ease forwards;
+}

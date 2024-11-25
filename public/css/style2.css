@@ -1,0 +1,384 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Top Navbar */
+.navbar {
+    background-color: white;
+    color: black;
+    border-bottom: 1px solid grey;
+    padding: 16px; 
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+.navbar .navbar-brand {
+    color: black;
+    display: flex;
+    align-items: center; 
+    font-family: lucida calligraphy;
+    font-size: 2em;
+}
+.navbar .navbar-brand img {
+    width: 80px; 
+    height: auto;
+    margin-right: 8px; 
+    margin-left: 50px;
+}
+.navbar i {
+    font-size: 2em;
+    color: black;
+}
+
+.navbar .btn-plus {
+    color: black; 
+    font-size: 1em; 
+    background-color: transparent;
+}
+
+.navbar span {
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+/* Sidebar */
+.sidebar {
+    display: block; 
+    width: 180px;
+    background-color: white;
+    border-right: 1px solid grey; 
+    padding: 16px;
+    box-sizing: border-box;
+    color: black;
+    height: calc(100% - 85px); 
+    position: fixed;
+    top: 85px; 
+    left: 0;
+    text-transform: uppercase;
+}
+
+.btn {
+    text-transform: uppercase;
+    outline: none;
+    border: none;
+    color: black;
+    font-size: 1.2em; 
+    font-family: Georgia;
+}
+
+.btn:hover {
+    color: grey;
+}
+
+.sidebar a {
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    color: black;
+    font-size: 1em;
+    margin-left: 20%;
+}
+
+.collapse a:hover {
+    color: grey !important;
+}
+
+.btn-plus {
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.btn-plus i {
+    margin-right: 5px;
+}
+
+.dropdown-menu a:hover{
+    background-color: rgb(208, 208, 208);
+    color: black;
+}
+.dropdown-menu-center {
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+.custom-btn {
+    background-color: lime;
+    color: black; 
+    width: 30%;
+    height: 50px;
+    border-radius: 80px;
+    display: block;
+    margin: 0 auto;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.custom-btn:hover {
+    background-color: lime;
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.sidebar .btn-toggle-nav .active a {
+    color: grey !important; 
+  }
+  
+.sidebar .btn-toggle-nav .active {
+    color: grey; 
+}
+
+
+/* Content */
+.content {
+    margin-top: 90px;
+    margin-left: 200px;
+}
+
+.sidebar-hidden .content {
+    margin-left: 0; 
+}
+
+/* Search Input */
+.search-container {
+    position: relative;
+    margin: 0 auto; 
+    width: 50%;  
+    display: flex;  
+    align-items: center;
+}
+
+.search-container input {
+    width: 100%; 
+    padding: 10px 40px;
+    border: 1px solid grey;
+    border-radius: 5px; 
+}
+
+.search-button {
+    position: absolute;
+    right: 10px; 
+    top: 50%;
+    transform: translateY(-50%); 
+    background: transparent; 
+    border: none; 
+    color: black;
+    cursor: pointer; 
+}
+
+.search-button:hover {
+    color: grey; 
+}
+
+.form-control:focus {
+    border-color: grey;
+    box-shadow: 0 0 5px rgba(73, 75, 73, 0.5);
+    outline: none;
+}
+
+.modal-dialog {
+    max-width: 700px;
+}
+
+.modal-sm {
+    width: 500px;
+}
+
+.text-center {
+    text-align: center; 
+}
+
+/* archive */
+.box {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    height: 200px;
+    width: 100%;
+}
+
+.box .profile-pic-container {
+    width: 100px;  
+    height: 100px; 
+    overflow: hidden; 
+    border-radius: 50%;
+    border: 1px solid #000000; 
+    margin: 0 auto; 
+    background-color: #f8f9fa;
+}
+
+.box .profile-pic-container img {
+    width: 100%;  
+    height: 100%; 
+    object-fit: cover; 
+}
+
+/* Apply background color based on column position using nth-child */
+.row .col-lg-4:nth-child(5n+1) .box {
+    background-color: #f5eef8;
+}
+.row .col-lg-4:nth-child(5n+2) .box {
+    background-color: #ebf5fb; 
+}
+.row .col-lg-4:nth-child(5n+3) .box {
+    background-color: #e8f8f5; 
+}
+.row .col-lg-4:nth-child(5n+4) .box {
+    background-color: #fbeee6; 
+}
+.row .col-lg-4:nth-child(5n+5) .box {
+    background-color: #eaecee; 
+}
+
+.box .dropdown-menu a:hover {
+    color: grey;
+    background-color: transparent;
+}
+
+
+/* Custom styles for the profile picture */
+.profile-pic-container {
+    width: 250px;  
+    height: 250px; 
+    overflow: hidden; 
+    border-radius: 50%;
+    border: 1px solid #000000; 
+    margin: 0 auto; 
+    background-color: #f8f9fa;
+}
+  
+.profile-pic-container img {
+    width: 100%;  
+    height: 100%; 
+    object-fit: cover; 
+}
+  
+.profile-details {
+    text-align: center;
+    margin-top: 15px;
+}
+  
+.profile-details h5 {
+    margin-bottom: 10px;
+}
+
+/* Style for additional info */
+.additional-info {
+    font-size: 14px;
+    color: #6c757d;
+    margin-top: 5px; 
+}
+  
+.info-row {
+    margin-top: 10px;
+    margin-left: 30px;
+}
+  
+.info-label {
+    font-weight: bold;
+    text-align: start;
+}
+  
+.info-field {
+    text-align: start;
+}
+
+/* Change Profile */
+.profile-pic-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+.change-photo-btn {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: transparent;
+    color: white;
+    font-size: 36px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.change-photo-btn:hover {
+    color: black;
+}
+
+/* Style for the collapsible images */
+.collapsible-info .profile-pic-container {
+    border-radius: 0%;
+    margin: 0 auto;
+    width: 200px;
+    height: 250px;
+}
+  
+.collapsible-info img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+  
+.button-collapse {
+    text-transform: uppercase;
+    outline: none;
+    border: 1px solid black;
+    color: #0f0f0f;
+    font-size: 1.2em; 
+    font-family: Georgia;
+}
+
+
+.profile-container {
+    max-width: 900px;
+    margin: 30px auto;
+}
+
+.profile-card {
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background: #fff;
+    margin-bottom: 30px;
+}
+
+.profile-card-header {
+    text-align: center;
+    padding: 30px 0;
+    background-color: #f8f9f9;
+    color: white;
+}
+
+.profile-card-header h3 {
+    margin-bottom: 10px;
+    color: #6c757d;
+}
+
+.profile-card-body {
+    padding: 20px;
+}
+
+.profile-info {
+    margin-bottom: 20px;
+}
+
+.profile-info p {
+    font-size: 16px;
+}
+
+.profile-info h5 {
+    font-weight: bold;
+    color: black;
+}
