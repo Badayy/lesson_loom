@@ -47,6 +47,7 @@ Route::prefix('school')->group(function () {
     Route::get('/view_template', [SchoolController::class, 'view_template']);
 });
 
+
 // TEACHER
 Route::get('/teacher_home', [ViewController::class, 'teacher_home']);
 Route::get('/teacher_account_settings', [ViewController::class, 'teacher_account_settings']);
