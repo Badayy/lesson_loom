@@ -14,7 +14,7 @@
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
             <button id="toggleSidebar" class="btn"><i class="fa-solid fa-bars"></i></button>
-            <a class="navbar-brand" href="/teacher_home">
+            <a class="navbar-brand" href="/teacher/home">
                 <img src="{{ asset('images/logo1.png') }}" alt="Logo">
                 LessonLoom
             </a>
@@ -49,7 +49,7 @@
                 </button>
                 <div class="collapse show" id="school-collapse">
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="/teacher_join_class">School 1</a></li>
+                        <li><a href="/teacher/join_class">School 1</a></li>
                     </ul>
                 </div>
             </li>
@@ -64,8 +64,8 @@
                 </button>
                 <div class="collapse" id="setting-collapse">
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="/teacher_profile">Profile</a></li>
-                        <li><a href="/teacher_account_settings">Account Settings</a></li>
+                        <li><a href="/teacher/profile">Profile</a></li>
+                        <li><a href="/teacher/account_settings">Account Settings</a></li>
                     </ul>
                 </div>
             </li>
@@ -75,9 +75,9 @@
                 </button>
                 <div class="collapse" id="archive-collapse">
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="/teacher_school_archive">School</a></li>
-                        <li><a href="/teacher_class_archive">Class</a></li>
-                        <li><a href="/teacher_lessonplan">Lesson Plan</a></li>
+                        <li><a href="/teacher/school_archive">School</a></li>
+                        <li><a href="/teacher/class_archive">Class</a></li>
+                        <li><a href="/teacher/lessonplan">Lesson Plan</a></li>
                     </ul>
                 </div>
             </li>
@@ -98,7 +98,7 @@
                                     <li><a class="dropdown-item" href="#">Leave</a></li>
                                 </ul>
                             </div>
-                            <a href="/teacher_join_class" style="text-decoration: none;">
+                            <a href="/teacher/join_class" style="text-decoration: none;">
                             <div class="box-logo mt-3">
                                 <div class="profile-pic-container">
                                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxo_EgOHHVrVITw2o-lsPjg8ekV2weKU8OFg&s" alt="Profile Picture">

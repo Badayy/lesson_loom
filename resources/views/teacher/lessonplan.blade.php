@@ -15,7 +15,7 @@
    <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
             <button id="toggleSidebar" class="btn"><i class="fa-solid fa-bars"></i></button>
-            <a class="navbar-brand" href="/teacher_home">
+            <a class="navbar-brand" href="/teacher/home">
                 <img src="{{ asset('images/logo1.png') }}" alt="Logo">
                 LessonLoom
             </a>
@@ -45,7 +45,7 @@
                 </button>
                 <div class="collapse" id="school-collapse">
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="/teacher_join_class">School 1</a></li>
+                        <li><a href="/teacher/join_class">School 1</a></li>
                     </ul>
                 </div>
             </li>
@@ -60,8 +60,8 @@
                 </button>
                 <div class="collapse" id="setting-collapse">
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="/teacher_profile">Profile</a></li>
-                        <li><a href="/teacher_account_settings">Account Settings</a></li>
+                        <li><a href="/teacher/profile">Profile</a></li>
+                        <li><a href="/teacher/account_settings">Account Settings</a></li>
                     </ul>
                 </div>
             </li>
@@ -71,9 +71,9 @@
                 </button>
                 <div class="collapse show" id="archive-collapse">
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="/teacher_school_archive">School</a></li>
-                        <li><a href="/teacher_class_archive">Class</a></li>
-                        <li class="active"><a href="/teacher_lessonplan">Lesson Plan</a></li>
+                        <li><a href="/teacher/school_archive">School</a></li>
+                        <li><a href="/teacher/class_archive">Class</a></li>
+                        <li class="active"><a href="/teacher/lessonplan">Lesson Plan</a></li>
                     </ul>
                 </div>
             </li>

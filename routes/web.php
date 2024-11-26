@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ViewController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\SchoolController;
+use App\Http\Controllers\TeacherController;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,10 +51,13 @@ Route::prefix('school')->group(function () {
 
 
 // TEACHER
-Route::get('/teacher_home', [ViewController::class, 'teacher_home']);
-Route::get('/teacher_account_settings', [ViewController::class, 'teacher_account_settings']);
-Route::get('/teacher_class_archive', [ViewController::class, 'teacher_class_archive']);
-Route::get('/teacher_lessonplan', [ViewController::class, 'teacher_lessonplan']);
-Route::get('/teacher_join_class', [ViewController::class, 'teacher_join_class']);
-Route::get('/teacher_profile', [ViewController::class, 'teacher_profile']);
-Route::get('/teacher_school_archive', [ViewController::class, 'teacher_school_archive']);
+Route::prefix('teacher')->group(function () {
+    Route::get('/home', [TeacherController::class, 'home']);
+    Route::get('/account_settings', [TeacherController::class, 'account_settings']);
+    Route::get('/class_archive', [TeacherController::class, 'class_archive']);
+    Route::get('/class', [TeacherController::class,  'class']);
+    Route::get('/lessonplan', [TeacherController::class, 'lessonplan']);
+    Route::get('/join_class', [TeacherController::class, 'join_class']);
+    Route::get('/profile', [TeacherController::class, 'profile']);
+    Route::get('/school_archive', [TeacherController::class, 'school_archive']);
+});

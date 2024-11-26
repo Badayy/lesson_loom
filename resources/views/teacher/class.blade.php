@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{{ asset('css/all.min.css') }}">
 </head>
 <body>
+
     <!-- Top Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
@@ -25,7 +26,7 @@
                             <i class="fa-solid fa-circle-user"></i>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-center text-center" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="teacher/profile">Profile</a></li>
+                            <li><a class="dropdown-item" href="teacher_profile">Profile</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="#"><i class="fa-solid fa-right-from-bracket" style="font-size: 1em;"></i> Sign Out</a></li>
                         </ul>
@@ -42,7 +43,7 @@
                 <button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#school-collapse" aria-expanded="false"><i class="fa-solid fa-book"></i>
                  School
                 </button>
-                <div class="collapse" id="school-collapse">
+                <div class="collapse show" id="school-collapse">
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                         <li><a href="/teacher/join_class">School 1</a></li>
                     </ul>
@@ -57,9 +58,9 @@
                 <button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#setting-collapse" aria-expanded="false"><i class="fa-solid fa-gear"></i>
                  Setting
                 </button>
-                <div class="collapse show" id="setting-collapse">
+                <div class="collapse" id="setting-collapse">
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li class="active"><a href="/teacher/profile">Profile</a></li>
+                        <li><a href="/teacher/profile">Profile</a></li>
                         <li><a href="/teacher/account_settings">Account Settings</a></li>
                     </ul>
                 </div>
@@ -81,68 +82,77 @@
 
      <!-- Content -->
      <div class="content p-5">
-        <div class="container py-2">
-            <div class="container profile-container">
-                <div class="profile-card">
-                    <div class="profile-card-header">
-                        <div class="profile-pic-container">
-                            <img src="https://i.pinimg.com/236x/a4/06/90/a40690ca5695bbb1b98bd92df6027cba.jpg" alt="Profile Picture">
+        <div class="container-fluid">
+            <ul class="nav nav-tabs" id="myTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" id="calendar-tab" data-bs-toggle="tab" href="#calendar" role="tab" aria-controls="calendar" aria-selected="true">Calendar</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="classwork-tab" data-bs-toggle="tab" href="#classwork" role="tab" aria-controls="classwork" aria-selected="false">Classwork</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="teacher-tab" data-bs-toggle="tab" href="#teacher" role="tab" aria-controls="teacher" aria-selected="false">Teacher</a>
+                </li>
+            </ul>
+        </div>
+            
+        <!-- Tab Content -->
+        <div class="container-fluid">
+            <div class="tab-content" id="myTabsContent">
+                <!-- Calendar Tab -->
+                <div class="tab-pane fade show active p-5 text-center" id="calendar" role="tabpanel" aria-labelledby="calendar-tab">
+                    <h3>Calendar</h3>
+                </div>
+        
+                <!-- Classwork Tab -->
+                <div class="tab-pane fade p-5" id="classwork" role="tabpanel" aria-labelledby="classwork-tab">
+                    <div class="row g-3">
+                        <div class="col-9">
+                            <div class="search-container float-start">
+                                <input type="text" class="form-control" id="searchInput" placeholder="Search..."> 
+                                <button class="btn search-button">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </button>
+                            </div>
                         </div>
-                        <h3>Teachers' Name</h3>
-                    </div>
 
-                    <div class="profile-card-body p-5 text-center">
-                        <div class="row g-5">
-                            <div class="col-6">
-                                <div class="profile-info">
-                                    <h5>First Name:</h5>
-                                    <p class="text-muted">John</p>
+                        <div class="col-4 mt-5">
+                            <a href="" style="text-decoration: none;">
+                                <div class="box text-center">
+                                    <div class="box-title text-dark mt-3">
+                                        <h2>Title</h2>
+                                    </div>
+                                    <div class="box-description text-dark mt-3">
+                                        <h5>Description</h5>
+                                    </div>
+                                    <div class="box-duedate text-muted">
+                                        <p>2024 - 2025</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="profile-info">
-                                    <h5>Last Name:</h5>
-                                    <p class="text-muted">Doe</p>
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="profile-info">
-                                    <h5>Gender:</h5>
-                                    <p class="text-muted">Male</p>
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="profile-info">
-                                    <h5>Birthday:</h5>
-                                    <p class="text-muted">11/11/2023</p>
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="profile-info">
-                                    <h5>Age:</h5>
-                                    <p class="text-muted">29</p>
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="profile-info">
-                                    <h5>Address:</h5>
-                                    <p class="text-muted">Cams</p>
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="profile-info">
-                                    <h5>Phone:</h5>
-                                    <p class="text-muted">092378647</p>
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="profile-info">
-                                    <h5>Email:</h5>
-                                    <p class="text-muted">teacher@email.com</p>
-                                </div>
-                            </div>
+                            </a>
                         </div>
+                        
+
+
                     </div>
+                </div>
+        
+                <!-- Teacher Tab -->
+                <div class="tab-pane fade" id="teacher" role="tabpanel" aria-labelledby="teacher-tab">
+                    <table class="table table-bordered table-striped text-center my-5">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Teacher</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>0</th>
+                                <th>Full Name</th>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
