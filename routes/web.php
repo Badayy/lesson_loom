@@ -49,7 +49,7 @@ Route::prefix('admin')->group(function () {
     Route::get('/newteacher', [AdminController::class, 'newteacher']);
     Route::get('/rejectschool', [AdminController::class, 'rejectschool']);
     Route::get('/rejectteacher', [AdminController::class, 'rejectteacher']);
-    Route::get('/viewschool', [AdminController::class, 'viewschool']);
+    Route::get('/viewschool', action: [AdminController::class, 'viewschool']);
     Route::get('/viewteacher', [AdminController::class, 'viewteacher']);
 });
 

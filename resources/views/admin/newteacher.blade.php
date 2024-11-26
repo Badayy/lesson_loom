@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('main-content')
-    <div class="container-fluid py-5">
+    <div class="container py-5">
         <div class="row g-4">
             <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="card shadow-sm">
