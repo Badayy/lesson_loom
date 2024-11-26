@@ -34,7 +34,7 @@ Route::prefix('admin')->group(function () {
 
 // SCHOOL
 Route::prefix('school')->group(function () {
-    Route::get('/home', [AdminController::class, 'home']);
+    Route::get('/home', [SchoolController::class,'home']);
     Route::get('/account_settings', [SchoolController::class, 'account_settings']);
     Route::get('/add_template', [SchoolController::class, 'add_template']);
     Route::get('/class_archive', [SchoolController::class, 'class_archive']);
@@ -46,8 +46,6 @@ Route::prefix('school')->group(function () {
     Route::get('/view_teacher', [SchoolController::class, 'view_teacher']);
     Route::get('/view_template', [SchoolController::class, 'view_template']);
 });
-
-
 
 // TEACHER
 Route::get('/teacher_home', [ViewController::class, 'teacher_home']);
