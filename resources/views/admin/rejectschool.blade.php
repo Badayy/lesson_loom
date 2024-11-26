@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('main-content')
-    <!-- The Content -->
     <div class="container-fluid">
         <div class="search-container">
             <input type="text" class="form-control" id="searchInput" placeholder="Search...">

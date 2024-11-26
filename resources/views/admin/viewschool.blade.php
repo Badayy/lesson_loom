@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('main-content')
-    <!-- The Content -->
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
