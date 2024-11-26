@@ -2,7 +2,7 @@
 
 @section('main-content')
     <!-- The Content -->
-    <div class="container-fluid p-5">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
                 <div class="search-container">

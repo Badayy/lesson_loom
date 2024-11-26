@@ -2,7 +2,7 @@
 
 @section('main-content')
     <!-- The Content -->
-    <div class="container-fluid p-5">
+    <div class="container-fluid">
         <div class="search-container">
             <input type="text" class="form-control" id="searchInput" placeholder="Search...">
             <button class="btn search-button" id="searchButton">

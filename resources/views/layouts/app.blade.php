@@ -13,39 +13,39 @@
 <body>
     <div class="sidebar">
         <h3 class="text-center">
-            <a href="/admin_home">Dashboard</a>
+            <a href="/admin/home" class="{{ request()->is('admin/home') ? 'active' : '' }}">Dashboard</a>
         </h3>
         <h6 class="text-center small"><a href=""><i class="fa-solid fa-right-from-bracket"></i> Sign Out</a></h6>
         <hr style="border: none; border-top: 1px solid #818181; width: 100%; margin: 16px 0;">
         <ul class="list-unstyled ps-0">
             <li class="mb-1">
-                <button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#school-collapse" aria-expanded="false"><i class="fa-solid fa-school"></i>
-                School
+                <button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#school-collapse" aria-expanded="false">
+                    <i class="fa-solid fa-school"></i> School
                 </button>
-                <div class="collapse" id="school-collapse">
+                <div class="collapse {{ request()->is('admin/newschool', 'admin/viewschool', 'admin/rejectschool') ? 'show' : '' }}" id="school-collapse">
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="/admin/newschool"><i class="fa-solid fa-eye"></i> Newcomer </a></li>
-                        <li><a href="/admin/viewschool"><i class="fa-solid fa-calendar-check"></i> Accepted </a></li>
-                        <li><a href="/admin/rejectschool"><i class="fa-solid fa-calendar-xmark"></i> Reject </a></li>
+                        <li><a href="/admin/newschool" class="{{ request()->is('admin/newschool') ? 'active' : '' }}"><i class="fa-solid fa-eye"></i> Newcomer</a></li>
+                        <li><a href="/admin/viewschool" class="{{ request()->is('admin/viewschool') ? 'active' : '' }}"><i class="fa-solid fa-calendar-check"></i> Accepted</a></li>
+                        <li><a href="/admin/rejectschool" class="{{ request()->is('admin/rejectschool') ? 'active' : '' }}"><i class="fa-solid fa-calendar-xmark"></i> Reject</a></li>
                     </ul>
                 </div>
             </li>
             <li class="mb-1">
-                <button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#teacher-collapse" aria-expanded="false"><i class="fa-solid fa-chalkboard-user"></i>
-                Teacher
+                <button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#teacher-collapse" aria-expanded="false">
+                    <i class="fa-solid fa-chalkboard-user"></i> Teacher
                 </button>
-                <div class="collapse" id="teacher-collapse">
+                <div class="collapse {{ request()->is('admin/newteacher', 'admin/viewteacher', 'admin/rejectteacher') ? 'show' : '' }}" id="teacher-collapse">
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="/admin/newteacher"><i class="fa-solid fa-eye"></i> Newcomer </a></li>
-                        <li><a href="/admin/viewteacher"><i class="fa-solid fa-calendar-check"></i> Accepted </a></li>
-                        <li><a href="/admin/rejectteacher"><i class="fa-solid fa-calendar-xmark"></i> Reject </a></li>
+                        <li><a href="/admin/newteacher" class="{{ request()->is('admin/newteacher') ? 'active' : '' }}"><i class="fa-solid fa-eye"></i> Newcomer</a></li>
+                        <li><a href="/admin/viewteacher" class="{{ request()->is('admin/viewteacher') ? 'active' : '' }}"><i class="fa-solid fa-calendar-check"></i> Accepted</a></li>
+                        <li><a href="/admin/rejectteacher" class="{{ request()->is('admin/rejectteacher') ? 'active' : '' }}"><i class="fa-solid fa-calendar-xmark"></i> Reject</a></li>
                     </ul>
                 </div>
             </li>
         </ul>
     </div>
 
-    <div class="content">
+    <div class="content p-5">
         @yield('main-content')
     </div>
 
