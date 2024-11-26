@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.admin_header')
 
 @section('main-content')
     <div class="container py-5">
