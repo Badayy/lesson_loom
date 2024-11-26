@@ -141,19 +141,27 @@
                         </div>
 
                         <div class="col-4 mt-5">
-                            <a href="" style="text-decoration: none;">
-                                <div class="box text-center">
-                                    <div class="box-title text-dark mt-3">
-                                        <h2>Title</h2>
-                                    </div>
-                                    <div class="box-description text-dark mt-3">
-                                        <h5>Description</h5>
-                                    </div>
-                                    <div class="box-duedate text-muted">
-                                        <p>2024 - 2025</p>
-                                    </div>
+                            <div class="box text-center">
+                                <div class="box-header dropend text-end">
+                                    <button class="btn" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#updateModal" style="cursor: pointer;">Update</a></li>
+                                    </ul>
                                 </div>
-                            </a>
+                                <a href="" style="text-decoration: none;">
+                                <div class="box-title text-dark mt-3">
+                                    <h2>Title</h2>
+                                </div>
+                                <div class="box-description text-dark mt-3">
+                                    <h5>Description</h5>
+                                </div>
+                                <div class="box-duedate text-muted">
+                                    <p>2024 - 2025</p>
+                                </div>
+                                </a>
+                            </div>
                         </div>
                         
 
@@ -184,8 +192,8 @@
                                                 <label for="duedate">Due Date:</label>
                                                 <input type="date" class="form-control" id="duedate" placeholder="duedate" name="duedate" required>
                                             </div>
-                                            <div class="col-md-8 mb-3 mt-3">
-                                                <button type="submit" class="btn custom-btn float-end mb-3">Update</button>
+                                            <div class="col-md-8 mb-3 mt-4">
+                                                <button type="submit" class="btn custom-btn float-end mb-3" style="margin-right: 20px">Create</button>
                                             </div>
                                         </div>
                                     </form>
@@ -194,6 +202,8 @@
                         </div>
                     </div>
                 </div>
+
+                
         
                 <!-- Teacher Tab -->
                 <div class="tab-pane fade" id="teacher" role="tabpanel" aria-labelledby="teacher-tab">
@@ -225,6 +235,39 @@
                     <form>
                         <div class="mb-3 mt-3 text-center">
                             <h1>CODE</h1>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Update Modal -->
+    <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="updateModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h5 class="modal-title" id="updateModalLabel">Update Classwork</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-12 mb-3 mt-3">
+                                <label for="title">Title:</label>
+                                <input type="text" class="form-control" id="title" name="title" required>
+                            </div>
+                            <div class="col-md-12 mb-3">
+                                <label for="AcademicEnd">Description:</label>
+                                <input type="text" class="form-control" id="description" name="description" required>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="duedate">Due Date:</label>
+                                <input type="date" class="form-control" id="duedate" placeholder="duedate" name="duedate" required>
+                            </div>
+                            <div class="col-md-8 mb-3 mt-4">
+                                <button type="submit" class="btn custom-btn float-end mb-3" style="margin-right: 20px">Update</button>
+                            </div>
                         </div>
                     </form>
                 </div>

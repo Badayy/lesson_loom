@@ -215,10 +215,11 @@
             <div class="modal-content">
                 <div class="modal-body">
                     <form>
-                        <div class="col-md-12 mb-3">
+                        <div class="col-md-12">
                             <label for="Password">Password:</label>
                             <input type="password" class="form-control" id="password" placeholder="Password" name="password" required>
                         </div>
+                        <button class="btn custom-btn mt-5 mb-3" onclick="window.location.href='/school/class';">Submit</button>
                     </form>
                 </div>
             </div>
