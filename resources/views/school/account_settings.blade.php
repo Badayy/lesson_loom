@@ -112,7 +112,7 @@
                                     <h6>Change your profile.</h6>
                                 </div>
                                 <div>
-                                    <i><span style="color: grey;">Update your profile picture.</span></i> 
+                                    <span><i>Update your profile picture.</i></span> 
                                     <a data-bs-toggle="modal" data-bs-target="#changeProfileModal" style="color: grey; cursor: pointer;" class="h6">Manage</a>
                                 </div>
                             </div>
@@ -121,12 +121,18 @@
                                     <h6>Change your password.</h6>
                                 </div>
                                 <div>
-                                    <i>Secure your account by updating your password.</span></i>
-                                 <a data-bs-toggle="modal" data-bs-target="#changePasswordModal" style="color: grey; cursor: pointer;">Manage</a>
+                                    <span><i>Secure your account by updating your password.</span></i>
+                                    <a data-bs-toggle="modal" data-bs-target="#changePasswordModal" style="color: grey; cursor: pointer;" class="h6">Manage</a>
                                 </div>
                             </div>
                             <div class="col-12 mb-5">
-                                <h6>Change your info. <a data-bs-toggle="modal" data-bs-target="#schoolInfoModal" style="color: grey; cursor: pointer;">Manage</a></h6>
+                                <div>
+                                    <h6>Change your info.</h6>
+                                </div>
+                                <div>
+                                    <span><i>Modify other details like your address, phone number, and other contact information to keep your profile up to date.</span></i>
+                                    <a data-bs-toggle="modal" data-bs-target="#schoolInfoModal" style="color: grey; cursor: pointer;" class="h6">Manage</a>
+                                </div>
                             </div>
                         </div>
                     </div>
