@@ -85,10 +85,10 @@
                 </div>
             </li>
             <li class="mb-1">
-                <button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#archive-collapse" aria-expanded="false"><i class="fa-solid fa-folder-open"></i>
+                <button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#history-collapse" aria-expanded="false"><i class="fa-solid fa-folder-open"></i>
                  History
                 </button>
-                <div class="collapse show" id="archive-collapse">
+                <div class="collapse show" id="history-collapse">
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                         <li><a href="/school/class_archive">Class</a></li>
                         <li><a href="/school/teacher_archive">Teacher</a></li>

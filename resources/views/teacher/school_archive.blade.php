@@ -25,7 +25,7 @@
                             <i class="fa-solid fa-circle-user"></i>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-center text-center" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="teacher_profile">Profile</a></li>
+                            <li><a class="dropdown-item" href="/teacher/profile">Profile</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="#"><i class="fa-solid fa-right-from-bracket" style="font-size: 1em;"></i> Sign Out</a></li>
                         </ul>
@@ -65,10 +65,10 @@
                 </div>
             </li>
             <li class="mb-1">
-                <button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#archive-collapse" aria-expanded="false"><i class="fa-solid fa-folder-open"></i>
-                 Archive
+                <button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#history-collapse" aria-expanded="false"><i class="fa-solid fa-folder-open"></i>
+                 history
                 </button>
-                <div class="collapse show" id="archive-collapse">
+                <div class="collapse show" id="history-collapse">
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                         <li class="active"><a href="/teacher/school_archive">School</a></li>
                         <li><a href="/teacher/class_archive">Class</a></li>
