@@ -13,4 +13,8 @@ class SchoolController extends Controller
     public function account_settings() {
         return view("school.account_settings");
     }
+
+    public function add_template() {
+        return view("school.add_template");
+    }
 }
