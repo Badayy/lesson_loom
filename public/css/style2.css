@@ -382,3 +382,32 @@ body {
     font-weight: bold;
     color: black;
 }
+
+/* class nav-tabs */
+.content .nav-tabs {
+    border: none;
+}
+
+.content .nav-item .nav-link {
+    border: none;
+    border-radius: 0;
+    transition: background-color 0.1s ease, border-radius 0.1s ease; 
+    color: black;
+}
+
+.content .nav-link.active {
+    background-color: transparent !important; 
+    color: lime !important; 
+    border: 1px solid lime;
+    border-radius: 30px; 
+}
+
+.content .tab-btn {
+    background-color: lime;
+    border-radius: 30px; 
+    color: black;
+}
+
+.content .tab-btn:hover {
+    color: black;
+}

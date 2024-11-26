@@ -15,7 +15,7 @@
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
             <button id="toggleSidebar" class="btn"><i class="fa-solid fa-bars"></i></button>
-            <a class="navbar-brand" href="/school_home">
+            <a class="navbar-brand" href="/school/home">
                 <img src="{{ asset('images/logo1.png') }}" alt="Logo">
                 LessonLoom
             </a>
@@ -32,7 +32,7 @@
                         </a>
                         <ul class="dropdown-menu dropdown-menu-center text-center" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#codeModal">CODE</a></li>
-                            <li><a class="dropdown-item" href="/school_profile">PROFILE</a></li>
+                            <li><a class="dropdown-item" href="/school/profile">PROFILE</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="#"><i class="fa-solid fa-right-from-bracket" style="font-size: 1em;"></i> SIGN OUT</a></li>
                         </ul>
@@ -51,7 +51,7 @@
                 </button>
                 <div class="collapse" id="class-collapse">
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="">Subject1</a></li>
+                        <li><a href="/school/class">Subject1</a></li>
                     </ul>
                 </div>
             </li>
@@ -61,9 +61,9 @@
                 </button>
                 <div class="collapse" id="teacher-collapse">
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="/school_newteacher">New</a></li>
-                        <li><a href="/school_view_teacher">View</a></li>
-                        <li><a href="/school_rejoin_teacher">Rejoin</a></li>
+                        <li><a href="/school/newteacher">New</a></li>
+                        <li><a href="/school/view_teacher">View</a></li>
+                        <li><a href="/school/rejoin_teacher">Rejoin</a></li>
                     </ul>
                 </div>
             </li>
@@ -73,8 +73,8 @@
                 </button>
                 <div class="collapse" id="template-collapse">
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="/school_add_template">Add</a></li>
-                        <li><a href="/school_view_template">View</a></li>
+                        <li><a href="/school/add_template">Add</a></li>
+                        <li><a href="/school/view_template">View</a></li>
                     </ul>
                 </div>
             </li>
@@ -84,8 +84,8 @@
                 </button>
                 <div class="collapse" id="setting-collapse">
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="/school_profile">Profile</a></li>
-                        <li><a href="/school_account_settings">Account Settings</a></li>
+                        <li><a href="/school/profile">Profile</a></li>
+                        <li><a href="/school/account_settings">Account Settings</a></li>
                     </ul>
                 </div>
             </li>
@@ -95,9 +95,9 @@
                 </button>
                 <div class="collapse" id="archive-collapse">
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="/school_class_archive">Class</a></li>
-                        <li><a href="/school_teacher_archive">Teacher</a></li>
-                        <li><a href="/school_lessonplan">Lesson Plan</a></li>
+                        <li><a href="/school/class_archive">Class</a></li>
+                        <li><a href="/school/teacher_archive">Teacher</a></li>
+                        <li><a href="/school/lessonplan">Lesson Plan</a></li>
                     </ul>
                 </div>
             </li>
@@ -106,7 +106,7 @@
 
     <!-- Content -->
     <div class="content p-5">
-        <div class="container my-5">
+        <div class="container-fluid my-3">
             <div class="row g-5">
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="box text-center">

@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{{ asset('css/all.min.css') }}">
 </head>
 <body>
-    
+
     <!-- Top Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
@@ -44,9 +44,9 @@
                 <button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#class-collapse" aria-expanded="false"><i class="fa-solid fa-book"></i>
                  Class
                 </button>
-                <div class="collapse" id="class-collapse">
+                <div class="collapse show" id="class-collapse">
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="">Subject1</a></li>
+                        <li><a href="/school/class">Subject1</a></li>
                     </ul>
                 </div>
             </li>
@@ -54,9 +54,9 @@
                 <button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#teacher-collapse" aria-expanded="false"><i class="fa-solid fa-chalkboard-user"></i>
                  Teacher
                 </button>
-                <div class="collapse show" id="teacher-collapse">
+                <div class="collapse" id="teacher-collapse">
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li class="active"><a href="/school/newteacher">New</a></li>
+                        <li><a href="/school/newteacher">New</a></li>
                         <li><a href="/school/view_teacher">View</a></li>
                         <li><a href="/school/rejoin_teacher">Rejoin</a></li>
                     </ul>
@@ -99,67 +99,122 @@
         </ul>
     </div>
 
-    <!-- The Content -->
-    <div class="content">
-        <div class="container py-5">
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="card shadow-sm">
-                        <div class="card-body text-center">
-                            <div class="profile-pic-container">
-                                <img src="https://i.pinimg.com/236x/a4/06/90/a40690ca5695bbb1b98bd92df6027cba.jpg" alt="Profile Picture">
+    <!-- Content -->
+    <div class="content p-5">
+        <div class="container-fluid">
+            <ul class="nav nav-tabs" id="myTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" id="calendar-tab" data-bs-toggle="tab" href="#calendar" role="tab" aria-controls="calendar" aria-selected="true">Calendar</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="classwork-tab" data-bs-toggle="tab" href="#classwork" role="tab" aria-controls="classwork" aria-selected="false">Classwork</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="teacher-tab" data-bs-toggle="tab" href="#teacher" role="tab" aria-controls="teacher" aria-selected="false">Teacher</a>
+                </li>
+            </ul>
+        </div>
+            
+        <!-- Tab Content -->
+        <div class="container-fluid">
+            <div class="tab-content" id="myTabsContent">
+                <!-- Calendar Tab -->
+                <div class="tab-pane fade show active p-5 text-center" id="calendar" role="tabpanel" aria-labelledby="calendar-tab">
+                    <h3>Calendar</h3>
+                </div>
+        
+                <!-- Classwork Tab -->
+                <div class="tab-pane fade p-5" id="classwork" role="tabpanel" aria-labelledby="classwork-tab">
+                    <div class="row g-3">
+                        <div class="col-9">
+                            <div class="search-container float-start">
+                                <input type="text" class="form-control" id="searchInput" placeholder="Search..."> 
+                                <button class="btn search-button">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </button>
                             </div>
-                            <div class="profile-details">
-                                <h5 class="card-title">Teachers' Name</h5>
-                            </div>
-                            <div class="collapse collapsible-info mt-3" id="collapseTeacher">
-                                <div class="additional-info">
-                                    <div class="row info-row">
-                                        <div class="col-5 info-label">Email:</div>
-                                        <div class="col-7 info-field">teacher@example.com</div>
-                                    </div>
-                                    <div class="row info-row">
-                                        <div class="col-5 info-label">Gender:</div>
-                                        <div class="col-7 info-field">Female</div>
-                                    </div>
-                                    <div class="row info-row">
-                                        <div class="col-5 info-label">Birthday:</div>
-                                        <div class="col-7 info-field">January 15, 1995</div>
-                                    </div>
-                                    <div class="row info-row">
-                                        <div class="col-5 info-label">Age:</div>
-                                        <div class="col-7 info-field">29</div>
-                                    </div>
-                                    <div class="row info-row">
-                                        <div class="col-5 info-label">Address:</div>
-                                        <div class="col-7 info-field">Cams</div>
-                                    </div>
-                                    <div class="row info-row">
-                                        <div class="col-5 info-label">Contact:</div>
-                                        <div class="col-7 info-field">09234762</div>
-                                    </div>
-                                </div>
-                                <div class="profile-pic-container mt-5">
-                                    <img src="{{ asset('images/img1.png') }}" alt="Image 1">
-                                </div>
-                                <div class="profile-pic-container mt-2">
-                                    <img src="{{ asset('images/img2.png') }}" alt="Image 2">
-                                </div>
-                            </div>
-                            <button class="btn btn-transparent button-collapse mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTeacher" aria-expanded="false" aria-controls="collapseTeacher">
-                                Show Details
+                        </div>
+                        <div class="col-3">
+                            <button type="button" class="btn tab-btn float-end" data-bs-toggle="modal" data-bs-target="#classworkModal" style="width: 70%;">
+                                <i class="fa-solid fa-plus"></i> Add Classwork
                             </button>
                         </div>
-                        <div class="card-footer text-center">
-                            <i class="fa-regular fa-circle-check h1 text-success" style="cursor: pointer;"></i>
-                            <i class="fa-regular fa-circle-xmark h1 text-danger" style="cursor: pointer;"></i>
+
+                        <div class="col-4 mt-5">
+                            <a href="" style="text-decoration: none;">
+                                <div class="box text-center">
+                                    <div class="box-title text-dark mt-3">
+                                        <h2>Title</h2>
+                                    </div>
+                                    <div class="box-description text-dark mt-3">
+                                        <h5>Description</h5>
+                                    </div>
+                                    <div class="box-duedate text-muted">
+                                        <p>2024 - 2025</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        
+
+
+                    </div>
+                </div>
+        
+                    <!-- Classwork Modal -->
+                    <div class="modal fade" id="classworkModal" tabindex="-1" aria-labelledby="classworkModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header text-center">
+                                    <h5 class="modal-title" id="classworkModalLabel">Create Classwork</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-md-12 mb-3 mt-3">
+                                                <label for="title">Title:</label>
+                                                <input type="text" class="form-control" id="title" name="title" required>
+                                            </div>
+                                            <div class="col-md-12 mb-3">
+                                                <label for="AcademicEnd">Description:</label>
+                                                <input type="text" class="form-control" id="description" name="description" required>
+                                            </div>
+                                            <div class="col-md-4 mb-3">
+                                                <label for="duedate">Due Date:</label>
+                                                <input type="date" class="form-control" id="duedate" placeholder="duedate" name="duedate" required>
+                                            </div>
+                                            <div class="col-md-8 mb-3 mt-3">
+                                                <button type="submit" class="btn custom-btn float-end mb-3">Update</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                
+        
+                <!-- Teacher Tab -->
+                <div class="tab-pane fade" id="teacher" role="tabpanel" aria-labelledby="teacher-tab">
+                    <table class="table table-bordered table-striped text-center my-5">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Teacher</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>0</th>
+                                <th>Full Name</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
+        
     </div>
 
     <!-- Code Modal -->

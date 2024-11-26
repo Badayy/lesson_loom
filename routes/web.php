@@ -38,6 +38,7 @@ Route::prefix('school')->group(function () {
     Route::get('/account_settings', [SchoolController::class, 'account_settings']);
     Route::get('/add_template', [SchoolController::class, 'add_template']);
     Route::get('/class_archive', [SchoolController::class, 'class_archive']);
+    Route::get('/class', [SchoolController::class,  'class']);
     Route::get('/lessonplan', [SchoolController::class, 'lessonplan']);
     Route::get('/newteacher', [SchoolController::class, 'newteacher']);
     Route::get('/profile', [SchoolController::class, 'profile']);

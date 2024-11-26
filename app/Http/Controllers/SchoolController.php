@@ -22,6 +22,10 @@ class SchoolController extends Controller
         return view("school.class_archive");
     }
 
+    public function class() {
+        return view("school.class");
+    }
+
     public function lessonplan() {
         return view('school.lessonplan');
     }
