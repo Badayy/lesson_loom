@@ -161,6 +161,18 @@
                                     <label for="female">Female</label>
                                 </div>
                             </div>
+                            <div class="col-12">
+                                <div class="mt-3">
+                                    <label for="idType" class="form-label">Select ID Type: </label>
+                                    <select class="form-select" name="idType" required>
+                                        <option disabled selected >Type of ID</option>
+                                        <option value="nationalId">National ID</option>
+                                        <option value="passportId">Passport</option>
+                                        <option value="driversId">Driver's License</option>
+                                        <option value="teacherId">Teacher's ID</option>>
+                                    </select>
+                                </div>
+                            </div>
                             <div class="col-12 mt-5">
                                 <label>ID Picture Examples:</label>
                             </div>
