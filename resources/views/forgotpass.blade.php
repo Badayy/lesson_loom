@@ -64,7 +64,7 @@
                         <div class="form-group mt-2">
                             <label for="newPassword">New Password</label>
                             <i class="fa-solid fa-lock icon" style="margin-left: 5px; margin-top: 11px;"></i>
-                            <input type="password" class="form-control" id="newPassword" name="newPassword" required>
+                            <input type="password" class="form-control" id="password" name="password" required>
                         </div>
                     </div>
                     <div class="col-12">
@@ -109,7 +109,7 @@
 
         // Show password functionality
         document.getElementById('showPasswords').addEventListener('change', function() {
-            const newPassword = document.getElementById('newPassword');
+            const password = document.getElementById('password');
             const confirmPassword = document.getElementById('confirmPassword');
             const type = this.checked ? 'text' : 'password';
             newPassword.type = type;
