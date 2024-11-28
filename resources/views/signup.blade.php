@@ -220,21 +220,19 @@
         const roleSelect = document.getElementById('roleSelect');
         const schoolForm = document.getElementById('schoolForm');
         const teacherForm = document.getElementById('teacherForm');
-        const registrationBox = document.querySelector('.registration-box'); // Reference to the registration box
+        const registrationBox = document.querySelector('.registration-box'); 
 
         roleSelect.addEventListener('change', function() {
             schoolForm.style.display = 'none';
             teacherForm.style.display = 'none';
 
-            // Reset the registration box height for both forms
-            registrationBox.style.minHeight = '80vh'; // Default height
+            registrationBox.style.minHeight = '80vh'; 
 
             if (this.value === 'school') {
                 schoolForm.style.display = 'block';
             } else if (this.value === 'teacher') {
                 teacherForm.style.display = 'block';
-                // Adjust the registration box height for teacher form
-                registrationBox.style.minHeight = '100vh'; // Increased height for Teacher form
+                registrationBox.style.minHeight = '100vh';
             }
         });
 
